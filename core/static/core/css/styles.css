@@ -1,0 +1,136 @@
+/**/
+
+            /*МЕНЮ НАВИГАЦИИ*/ /**/
+
+body { /*настройки сайта по умолчанию*/
+    background: linear-gradient(to bottom, #fff, #D9C4B8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    background-attachment: fixed;
+    font-family: corbel;
+    font-size: 16px;
+    color: #0D0D0D;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar { /*настройка области, где будет расположено меню - контейнер*/
+    width: 100%; /*ширина меню*/
+    height: auto; /*высота меню*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.navbar .container { /*чтобы в контейнере все было по середине*/
+    display: flex;
+    justify content: space-between;
+    align-items: center;
+}
+
+.navbar_logo {
+    display: flex;
+}
+
+.navbar_logo img {
+    margin-right: 10px;
+    float: left;
+    width: auto;
+    height: 80px;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.navbar-menu li {
+    display: inline-block; /*чтобы элементы меню были в линию*/
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.btn-outline-info { /*настройка пунктов меню, самих надписей*/
+    border-color:  #c42020;
+    color:  #c42020;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.btn-outline-info:hover { /*эффекты при наведении на пункты меню*/
+    background-color:  #c42020;
+    border-color:  #c42020;
+    color: #fff;
+}
+
+.navbar-brand { /*настройка названия*/
+    font-size: 50px;
+    text-decoration: none;
+    color: #0D0D0D;
+    letter-spacing: 7px;
+    transition: all .25s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #c42020;
+}
+
+
+            /*ТАБЛИЦА*/ /**/
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.list-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    box-shadow: 0px 0px 15px rgba(166, 137, 111, .6);
+    border-radius: 30px;
+    border: solid rgba(0, 0, 0, .1);
+    border-width: 0.1ex 0.1ex 0.1ex;
+    padding: 30px;
+    margin-top: 3%;
+    background: #fff;
+}
+
+.table {
+    font-size: 20px;
+    font: corbel;
+}
+
+            /*Сотрудник месяца*/ /**/
+
+.list-container img {
+    width: auto;
+    height: 400px;
+    border: #D9C4B8;
+}
+
+.card {
+    width: 500px;
+    height: auto;
+}
+
+.card img {
+    height: 500px;
+    width: auto;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.form-floating {
+    margin-bottom: 10px;
+}
+

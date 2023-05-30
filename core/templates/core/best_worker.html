@@ -1,0 +1,20 @@
+{% extends 'core/layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5">
+        <center>
+            <h1>{{title}}</h1>
+            <br>
+            <div class="card">
+                <img src="{% static 'core/img/cat1.jpg' %}" alt="Сотрудник месяца">
+                <h3>Сотрудник отдела мягких лапок</h3>
+                <h2>Лапочка</h2>
+                <br>
+                <h4>дом. адрес.: г. Пушистиков, ул. Длинношёрстных, д. Мягенький</h4>
+                <h4>e-mail: cutie@catsarethebest.cat</h4>
+                <h4>тел.: неть</h4>
+            </div>
+            <br><br>
+        </center>
+    </div>
+{% endblock %}

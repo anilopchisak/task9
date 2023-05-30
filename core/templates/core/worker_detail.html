@@ -1,0 +1,19 @@
+{% extends 'core/layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5">
+        <center>
+            <h1>{{title}} {{worker.name}} {{worker.surname}}</h1>
+            <br>
+            <div class="card">
+                <img src="{{worker.photo.url}}" alt="Работник">
+                <h3>{{worker.depart.name}}</h3>
+                <h2>{{worker.position.name}}</h2>
+                <br>
+                <h4>e-mail: {{worker.email}}</h4>
+                <h4>тел.: {{worker.phone}}</h4>
+            </div>
+            <br><br>
+        </center>
+    </div>
+{% endblock %}
