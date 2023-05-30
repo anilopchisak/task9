@@ -2,31 +2,59 @@
 {% load static %}
 {% block content %}
     <div class="container mt-5">
-        <div class="list-container">
-            <center>
-                <h1 class="list">{{title}}</h1>
-                <br>
-                <table class="table table-hover">
-                    <thead>
-                        <th>№</th>
-                        <th>Имя</th>
-                        <th>Второе имя</th>
-                        <th>Отдел</th>
-                        <th>Должность</th>
-                    </thead>
-                    <tbody>
-                        {% for worker in workers %}
-                            <tr onclick="document.location='worker_detail/{{worker.id}}'">
-                                <td>{{ worker.id }}</td>
-                                <td>{{ worker.name }}</td>
-                                <td>{{ worker.surname }}</td>
-                                <td>{{ worker.depart.name }}</td>
-                                <td>{{ worker.position.name }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </center>
+        <div class="row">
+
+            <div class="col">
+                <div class="list-container">
+                    <h1 class="list">{{title}}</h1>
+                    <form method="get" role="search">
+                        <div class="form-group">
+                            {{form.name}}
+                        </div>
+                        <div class="form-group">
+                            {{form.kpi}}
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-outline" type="submit">Поиск</button>
+                        </div>
+                        <div class="form-group">
+                            {{form.errors}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="list-container">
+
+                    <center>
+                        <table class="table table-hover">
+                            <thead>
+                                <th></th>
+                                <th></th>
+                                <th>Имя</th>
+                                <th>Второе имя</th>
+                                <th>Отдел</th>
+                                <th>Должность</th>
+                            </thead>
+                            <tbody>
+                                {% for worker in workers %}
+                                    <tr onclick="document.location='worker_detail/{{worker.id}}'">
+                                        <td><a href="{% url 'core:worker_update' pk=worker.pk %}">Изменить</a></td>
+                                        <td><a href="{% url 'core:worker_delete' pk=worker.pk %}">Удалить</a></td>
+                                        <td>{{ worker.name }}</td>
+                                        <td>{{ worker.surname }}</td>
+                                        <td>{{ worker.depart.name }}</td>
+                                        <td>{{ worker.position.name }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </center>
+
+                </div>
+            </div>
+
         </div>
     </div>
 {% endblock %}

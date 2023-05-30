@@ -1,0 +1,20 @@
+{% extends 'core/layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="list-container">
+            <h1>{{title}}</h1>
+            <form method="post" action="{% url 'core:worker_update' pk=worker.pk %}" enctype="multipart/form-data" class="form-floating">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+                <center>
+                    <button type="submit" class="btn btn-outline-info">Изменить</button>
+                </center>
+
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

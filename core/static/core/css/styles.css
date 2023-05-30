@@ -104,6 +104,42 @@ h1 {
     font: corbel;
 }
 
+.form-group{
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    border: solid rgba(0, 0, 0, .3);
+    border-width: 0.1ex 0.1ex 0.1ex;
+    line-height: 2em;
+    width: 100%;
+}
+
+.form-group select {
+    border: solid rgba(0, 0, 0, .3);
+    border-width: 0.1ex 0.1ex 0.1ex;
+    line-height: 10em;
+    width: 400px;
+}
+
+.btn-outline {
+    font-size: 20px;
+    border-radius: 20px;
+    color: #c42020;
+    border-color: #c42020;
+    border-width: 0.1ex 0.1ex 0.1ex;
+    line-height: 1em;
+    transition: all .1s ease-in-out;
+}
+
+.btn-outline:hover {
+    background-color:  #c42020;
+    border-color:  #c42020;
+    color: #fff;
+}
+
             /*Сотрудник месяца*/ /**/
 
 .list-container img {
