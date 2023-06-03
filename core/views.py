@@ -25,7 +25,6 @@ class WorkerList(TitleMixin,ListView):
     def get_queryset(self):
         name = self.request.GET.get('name')
         kpi = self.request.GET.get('kpi')
-        # depart = self.request.GET.get('depart')
         qs = models.Worker.objects.all()
         if name or kpi:
             return qs.filter(Q(name__icontains=name) | Q(kpi__contains=kpi))

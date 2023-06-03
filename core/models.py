@@ -27,7 +27,7 @@ class Worker(models.Model):
     position = models.ForeignKey(Position, on_delete=models.DO_NOTHING, verbose_name='Должность')
     phone = models.CharField(verbose_name='Номер телефона', null=True, blank=True, max_length=255)
     email = models.EmailField(verbose_name='E-mail')
-    photo = models.ImageField(upload_to='workerphotos', verbose_name='Фото')
+    photo = models.ImageField(upload_to='workerphotos', verbose_name='Фото', blank=True)
     kpi = models.IntegerField(verbose_name='KPI(%)')
 
     def __str__(self):

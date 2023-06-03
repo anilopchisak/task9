@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
                 ('surname', models.CharField(blank=True, max_length=255, verbose_name='Второе имя')),
                 ('phone', models.CharField(blank=True, max_length=255, null=True, verbose_name='Номер телефона')),
                 ('email', models.EmailField(max_length=254, verbose_name='E-mail')),
-                ('photo', models.ImageField(upload_to='workerphotos', verbose_name='Фото')),
+                ('photo', models.ImageField(upload_to='workerphotos', verbose_name='Фото', blank=True)),
                 ('kpi', models.IntegerField(verbose_name='KPI(%)')),
                 ('depart', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='core.department', verbose_name='Отдел')),
                 ('position', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='core.position', verbose_name='Должность')),
