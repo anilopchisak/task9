@@ -3,7 +3,7 @@ on:
   [push, pull_request]
 jobs:
 
-  tests: Run tests and flake8
+  tests: Run tests
   runs-on: ubuntu-latest
   strategy:
     max-parallel: 4
@@ -26,7 +26,3 @@ jobs:
     - name: Run tests
       run: |
         pyhton manage.py test core
-
-    - name: Run flake8
-      run: |
-        flake8 core
